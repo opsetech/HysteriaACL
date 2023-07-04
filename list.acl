@@ -1,0 +1,20 @@
+# direct "ir domains"
+direct domain-suffix .ir
+direct domain-suffix downloadha.com
+direct domain-suffix torob.com
+
+# Block Censor Server IP
+block ip 10.10.34.35
+
+# Block all China IPs and Direct all Iran IPs
+direct country ir
+block country cn
+
+
+# Hijack all LAN connections to loopback
+hijack cidr 192.168.0.0/16 127.0.0.1
+hijack cidr 10.0.0.0/8 127.0.0.1
+hijack cidr 172.16.0.0/12 127.0.0.1
+
+# Block everything else
+proxy all
